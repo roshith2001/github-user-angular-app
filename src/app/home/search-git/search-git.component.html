@@ -1,0 +1,16 @@
+<div class="container">
+    <h1>Search Github User</h1>
+    <form #searchFrom="ngForm" (submit)="findUser(username)">
+        <input name="username" id="username" type="text" [(ngModel)]="username">
+        <button type="submit">Search</button>
+    </form>
+
+    <div *ngIf="githubUser" class="user-container">
+        <img [src]="githubUser.avatar_url" [alt]="githubUser.name + 'name'">
+        <div>
+            <h3>{{githubUser.name}}</h3>
+            <p>Repos: {{githubUser.public_repos}}</p>
+        </div>
+        <button (click)="viewProfile(githubUser)">View Profile</button>
+    </div>
+</div>

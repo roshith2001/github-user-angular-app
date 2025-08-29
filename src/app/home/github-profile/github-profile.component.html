@@ -1,0 +1,20 @@
+<h1 *ngIf="profileData" >Profile</h1>
+<div *ngIf="profileData" class="profile-container">
+  <img [src]="profileData.avatar_url" [alt]="profileData.name + ' Image'">
+  <p class="username">{{profileData.login}}</p>
+  <h3>{{profileData.name}}</h3>
+  <p>{{profileData.bio}}</p>
+  <div class="group-data">
+    <p>Accessebility: {{profileData.user_view_type | uppercase}}</p>
+    <p>Repos: {{profileData.public_repos}}</p>
+  </div>
+  <div class="group-data">
+    <p>Followers: {{profileData.followers}}</p>
+    <p>Following: {{profileData.following}}</p>
+  </div>
+  <div class="group-data">
+    <a [href]="profileData.html_url" target="_blank">Visit Github</a>
+    <a [href]="profileData.blog" target="_blank">Visit Website</a>
+  </div>
+  <button (click)="addAsFavourite(profileData)">Add to Favourite ❤️</button>
+</div>

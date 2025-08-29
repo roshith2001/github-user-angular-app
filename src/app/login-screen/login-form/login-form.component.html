@@ -1,0 +1,17 @@
+<div class="container">
+    <img src="../../assets/logo.png" alt="logo">
+    <p class="error" *ngIf="!validUserFound">No user found</p>
+    <form #loginForm="ngForm" (submit)="onSubmitLoginForm()">
+        <div class="form-group">
+            <label>Email: </label>
+            <input id="email" name="email" type="email" [(ngModel)]="user.email" required #userEmail="ngModel">
+            <div class="error" *ngIf="userEmail.invalid && userEmail.touched">Email is required</div>
+        </div>
+        <div class="form-group">
+            <label>Password: </label>
+            <input id="password" name="password" type="password" [(ngModel)]="user.password" required #userPass="ngModel">
+            <div class="error" *ngIf="userPass.invalid && userPass.touched">Password is required</div>
+        </div>
+        <button type="submit" [disabled]="loginForm.invalid">Submit</button>
+    </form>
+</div>

@@ -1,0 +1,88 @@
+/* profile.component.css */
+
+.profile-container {
+  max-width: 100%;
+  margin: 20px auto;
+  padding: 20px;
+  background: #111; 
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.05);
+  display: grid;
+  grid-template-rows: auto auto auto 1fr;
+  gap: 10px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.profile-container:hover {
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.08);
+}
+
+.profile-container img {
+  width: 170px;
+  height: 170px;
+  border-radius: 100%;
+  object-fit: cover;
+  margin: 0 auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+.profile-container h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+.group-data{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.profile-container .username{
+    font-style: italic;
+}
+
+.profile-container p {
+  color: #ccc;
+  flex-grow: 1;
+  font-size: 0.9rem;
+  margin: 4px 0;
+  background-color: #222;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.profile-container a {
+  display: inline-block;
+  flex-grow: 1;
+  padding: 10px 16px;
+  background: #222;
+  color: #0af; /* accent color */
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.profile-container a:hover {
+  background: #333;
+}
+
+.profile-container button {
+  padding: 10px 20px;
+  margin: 10px 0 0 0;
+  border: none;
+  border-radius: 12px;
+  background: #0070f3;
+  color: white;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.profile-container button:hover {
+  background: #005bb5;
+}

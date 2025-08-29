@@ -1,0 +1,23 @@
+<div class="favourites-container">
+    <h1>Favourites</h1>
+    <div *ngIf="favourites.length <= 0">
+        No Favourites yet!
+    </div>
+  <div *ngFor="let favourite of favourites" class="favourite-tile">
+    <img [src]="favourite.avatar_url" [alt]="favourite.name" class="avatar">
+
+    <div class="favourite-details">
+      <h3>{{ favourite.name }}</h3>
+      <p class="login">@{{ favourite.login }}</p>
+    </div>
+
+    <div class="tile-actions">
+      <button (click)="viewProfile(favourite)" target="_blank" class="btn view-btn">
+        View
+      </button>
+      <button (click)="removeFavourite(favourite)" class="btn unfav-btn">
+        Unfavourite
+      </button>
+    </div>
+  </div>
+</div>
