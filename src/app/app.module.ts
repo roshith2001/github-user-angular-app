@@ -12,6 +12,8 @@ import { SearchGitComponent } from './home/search-git/search-git.component';
 import { GithubProfileComponent } from './home/github-profile/github-profile.component';
 import { favouriteReducer } from './store/favourite.reducer';
 import { FavouritesComponent } from './home/favourites/favourites.component';
+import { RegisterComponent } from './register/register.component';
+import { PasswordSimilarityDirective } from './directives/password-similarity.directive';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { FavouritesComponent } from './home/favourites/favourites.component';
     HomeComponent,
     SearchGitComponent,
     GithubProfileComponent,
-    FavouritesComponent
+    FavouritesComponent,
+    RegisterComponent,
+    PasswordSimilarityDirective
   ],
   imports: [
     BrowserModule,
